@@ -31,17 +31,22 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KnowMapTheme {
-        Greeting("Android")
+fun BottomNavigationBar(){
+    BottomNavigation(
+        backColor = MaterialTheme.colors.primarySurface,
+        contentColor =  MaterialTheme.colors.onPrimary,
+    ){
+        BottomNavigationItem(
+            icon = {
+                Icon(
+                    imgaVector = ImageVector.vectorResource(id = R.drawable.ic_history),
+                    contentDescription  = "History*/
+                )
+            },
+            selected = false
+            onClick = {
+                
+            }
+        )
     }
 }
