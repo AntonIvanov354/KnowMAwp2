@@ -26,10 +26,6 @@ class MainActivity : ComponentActivity() {
                     }
                 ) { innerPadding ->
                     // Здесь можно добавить содержимое вашего Scaffold
-                    // Например, контент может быть обернут в PaddingValues, чтобы избежать перекрытия с TopAppBar
-                    Column(modifier = Modifier.padding(innerPadding)) {
-                        // Ваш контент здесь
-                        Text(text = "Main Content Here")
                     }
                 }
             }
