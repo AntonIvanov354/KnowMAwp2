@@ -19,17 +19,22 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KnowMapTheme {
-                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        TopNavigationBar()
+                    }
+                ) { innerPadding ->
+                    // Здесь можно добавить содержимое вашего Scaffold
+                    // Например, контент может быть обернут в PaddingValues, чтобы избежать перекрытия с TopAppBar
+                    Column(modifier = Modifier.padding(innerPadding)) {
+                        // Ваш контент здесь
+                        Text(text = "Main Content Here")
+                    }
                 }
             }
         }
     }
-}
-
 @Composable
 fun BottomNavigationBar(){
     BottomNavigation(
